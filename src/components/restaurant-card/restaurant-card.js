@@ -1,16 +1,16 @@
+import { CDN_IMAGE_URL } from "../../utils/constants";
+
 const RestaurantCard = (props) => {
   const { name, cloudinaryImageId, avgRating, sla, cuisines } =
     props.restaurant;
-  console.log(name, "form card");
+  // console.log(name, "form card");
   return (
     <div className="rounded-[6px] w-[31.5%] hover:shadow hover:scale-95 transition cursor-pointer">
       <figure className="">
         <img
           className="object-cover rounded-[6px] h-[200px] w-full"
-          src={
-            "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-            cloudinaryImageId
-          }
+          src={CDN_IMAGE_URL + cloudinaryImageId}
+          alt={name}
         />
       </figure>
       <article className="p-[16px]">
